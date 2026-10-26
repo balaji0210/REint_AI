@@ -5,3 +5,4 @@ pandas
 pytest
 python-dateutil
 pydantic
+numpy

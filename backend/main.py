@@ -18,7 +18,7 @@ from pathlib import Path
 import sys
 from typing import List, Optional
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
 import pandas as pd
@@ -123,7 +123,31 @@ app.add_middleware(
 )
 
 
+@app.middleware("http")
+async def fix_vercel_path_routing(request: Request, call_next):
+    """Restore original client request path from Vercel rewrite proxy headers."""
+    matched_path = (
+        request.headers.get("x-matched-path")
+        or request.headers.get("x-vercel-matched-path")
+        or request.headers.get("x-invoke-path")
+        or request.headers.get("x-forwarded-uri")
+        or request.headers.get("x-original-uri")
+        or request.headers.get("x-rewrite-url")
+    )
+    if matched_path:
+        clean_path = matched_path.split("?")[0]
+        if request.scope.get("path") in ("/api/index.py", "/api/index", "/main.py", "/index.py", "/api"):
+            request.scope["path"] = clean_path
+    elif request.scope.get("path") in ("/api/index.py", "/api/index", "/main.py", "/index.py"):
+        request.scope["path"] = "/"
+
+    return await call_next(request)
+
+
 @app.get("/")
+@app.get("/api/index.py")
+@app.get("/api/index")
+@app.get("/main.py")
 def home():
     """Root verification endpoint confirming backend status and route catalog."""
     return {

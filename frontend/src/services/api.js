@@ -2,10 +2,14 @@
  * API service for communicating with the Wind Forecast Dashboard backend.
  */
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+const rawApiUrl = import.meta.env.VITE_API_URL;
+const API_BASE = rawApiUrl
+  ? rawApiUrl.replace(/\/+$/, '')
+  : (import.meta.env.DEV ? 'http://127.0.0.1:8000' : '');
 
 async function fetchJson(endpoint, params = {}) {
-  const url = new URL(`${API_BASE}${endpoint}`);
+  const base = API_BASE || (typeof window !== 'undefined' ? window.location.origin : 'http://127.0.0.1:8000');
+  const url = new URL(`${base}${endpoint}`);
   Object.entries(params).forEach(([key, val]) => {
     if (val !== undefined && val !== null && val !== '') {
       url.searchParams.append(key, val);

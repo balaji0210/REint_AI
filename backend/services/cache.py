@@ -15,8 +15,10 @@ import pandas as pd
 
 logger = logging.getLogger(__name__)
 
-# Default cache directory at project root: data/cache
-DEFAULT_CACHE_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "cache"
+# Cache directory at project root (or overridden via CACHE_DIR env var)
+DEFAULT_CACHE_DIR = Path(
+    os.environ.get("CACHE_DIR", str(Path(__file__).resolve().parent.parent.parent / "data" / "cache"))
+)
 DEFAULT_TTL = timedelta(hours=24)
 
 

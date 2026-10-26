@@ -17,7 +17,12 @@ export default function OverviewTab({ accuracy, comparison, loading, error }) {
     return (
       <div className="state-container" data-testid="loading-state">
         <div className="spinner"></div>
-        <p style={{ color: 'var(--text-muted)' }}>Loading January 2026 wind outturn and day-ahead forecast data...</p>
+        <p style={{ color: 'var(--text-muted)', fontWeight: 500 }}>
+          Loading January 2026 wind outturn and day-ahead forecast data...
+        </p>
+        <span style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginTop: 4 }}>
+          (On initial cold start, the backend may take a few seconds to ingest and align upstream Elexon data)
+        </span>
       </div>
     );
   }

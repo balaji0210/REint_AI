@@ -15,12 +15,20 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY backend/requirements.txt ./backend/requirements.txt
 RUN pip install --no-cache-dir -r ./backend/requirements.txt
 
-# Copy source code
+# Create dedicated non-root user and set up directory permissions
+RUN groupadd -g 1000 appuser && \
+    useradd -u 1000 -g appuser -s /bin/bash -m appuser
+
+# Copy application source code
 COPY backend ./backend
 COPY scripts ./scripts
 
-# Create data directory for cache persistence
-RUN mkdir -p /app/data/cache
+# Create data directory for cache persistence with appropriate ownership
+RUN mkdir -p /app/data/cache && \
+    chown -R appuser:appuser /app
+
+# Switch to non-root user
+USER appuser
 
 EXPOSE 8000
 

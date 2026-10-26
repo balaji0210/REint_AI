@@ -18,7 +18,7 @@ import MetricCard from '../components/MetricCard';
 export default function AccuracyTab({ accuracy, dailyAccuracy, comparison, loading, error }) {
   if (loading) {
     return (
-      <div className="state-container">
+      <div className="state-container" data-testid="loading-state">
         <div className="spinner"></div>
         <p style={{ color: 'var(--text-muted)' }}>Calculating daily accuracy distributions and error analytics...</p>
       </div>
@@ -27,8 +27,16 @@ export default function AccuracyTab({ accuracy, dailyAccuracy, comparison, loadi
 
   if (error) {
     return (
-      <div className="error-container">
+      <div className="error-container" data-testid="error-state">
         <p>{error}</p>
+      </div>
+    );
+  }
+
+  if (!comparison || comparison.length === 0) {
+    return (
+      <div className="state-container" data-testid="empty-state">
+        <p style={{ color: 'var(--text-muted)' }}>No accuracy data available for the chosen filters.</p>
       </div>
     );
   }

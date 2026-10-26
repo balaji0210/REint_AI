@@ -15,7 +15,7 @@ import MetricCard from '../components/MetricCard';
 export default function OverviewTab({ accuracy, comparison, loading, error }) {
   if (loading) {
     return (
-      <div className="state-container">
+      <div className="state-container" data-testid="loading-state">
         <div className="spinner"></div>
         <p style={{ color: 'var(--text-muted)' }}>Loading January 2026 wind outturn and day-ahead forecast data...</p>
       </div>
@@ -24,12 +24,20 @@ export default function OverviewTab({ accuracy, comparison, loading, error }) {
 
   if (error) {
     return (
-      <div className="error-container">
+      <div className="error-container" data-testid="error-state">
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontWeight: 700 }}>
           <AlertCircle size={18} />
           <span>Error loading dashboard data</span>
         </div>
         <p style={{ marginTop: 6, fontSize: '0.85rem' }}>{error}</p>
+      </div>
+    );
+  }
+
+  if (!comparison || comparison.length === 0) {
+    return (
+      <div className="state-container" data-testid="empty-state">
+        <p style={{ color: 'var(--text-muted)' }}>No comparison data found for the selected date range and cutoff.</p>
       </div>
     );
   }

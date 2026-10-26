@@ -1,0 +1,1 @@
+{"n_matched":744,"mae":2142.12,"rmse":2611.7,"mean_error":1851.9,"mape":22.38,"wape":18.5,"excluded_zero_actuals":0,"unmatched_actuals":0,"unmatched_forecasts":118,"cutoff_time":"09:00","cutoff_days_before":1,"method":"hourly_mean"}

@@ -1,0 +1,1064 @@
+{
+  "2026-01-01T12:00:00Z": {
+    "target_startTime": "2026-01-01T12:00:00Z",
+    "actual_generation": 16330.0,
+    "selected_forecast": 19764.0,
+    "cutoff_time": "2025-12-31T09:00:00Z",
+    "total_forecasts": 24,
+    "forecasts": [
+      {
+        "publishTime": "2025-12-30T02:30:00Z",
+        "generation": 19192.0,
+        "lead_time_hours": 57.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2025-12-30T04:30:00Z",
+        "generation": 19227.0,
+        "lead_time_hours": 55.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2025-12-30T07:30:00Z",
+        "generation": 19229.0,
+        "lead_time_hours": 52.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2025-12-30T09:30:00Z",
+        "generation": 19164.0,
+        "lead_time_hours": 50.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2025-12-30T11:30:00Z",
+        "generation": 19137.0,
+        "lead_time_hours": 48.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2025-12-30T15:30:00Z",
+        "generation": 19481.0,
+        "lead_time_hours": 44.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2025-12-30T18:30:00Z",
+        "generation": 19576.0,
+        "lead_time_hours": 41.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2025-12-30T22:30:00Z",
+        "generation": 19685.0,
+        "lead_time_hours": 37.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2025-12-31T02:30:00Z",
+        "generation": 19790.0,
+        "lead_time_hours": 33.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2025-12-31T04:30:00Z",
+        "generation": 19811.0,
+        "lead_time_hours": 31.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2025-12-31T07:30:00Z",
+        "generation": 19764.0,
+        "lead_time_hours": 28.5,
+        "is_selected": true,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2025-12-31T09:30:00Z",
+        "generation": 19824.0,
+        "lead_time_hours": 26.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2025-12-31T11:30:00Z",
+        "generation": 19725.0,
+        "lead_time_hours": 24.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2025-12-31T15:30:00Z",
+        "generation": 19672.0,
+        "lead_time_hours": 20.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2025-12-31T18:30:00Z",
+        "generation": 19870.0,
+        "lead_time_hours": 17.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2025-12-31T22:30:00Z",
+        "generation": 20025.0,
+        "lead_time_hours": 13.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-01T02:30:00Z",
+        "generation": 19903.0,
+        "lead_time_hours": 9.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-01T04:30:00Z",
+        "generation": 20030.0,
+        "lead_time_hours": 7.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-01T07:30:00Z",
+        "generation": 20127.0,
+        "lead_time_hours": 4.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-01T09:30:00Z",
+        "generation": 19980.0,
+        "lead_time_hours": 2.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-01T11:30:00Z",
+        "generation": 19918.0,
+        "lead_time_hours": 0.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-01T15:30:00Z",
+        "generation": 19994.0,
+        "lead_time_hours": -3.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-01T18:30:00Z",
+        "generation": 19994.0,
+        "lead_time_hours": -6.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-01T22:30:00Z",
+        "generation": 19994.0,
+        "lead_time_hours": -10.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      }
+    ]
+  },
+  "2026-01-10T18:00:00Z": {
+    "target_startTime": "2026-01-10T18:00:00Z",
+    "actual_generation": 8654.5,
+    "selected_forecast": 6409.0,
+    "cutoff_time": "2026-01-09T09:00:00Z",
+    "total_forecasts": 24,
+    "forecasts": [
+      {
+        "publishTime": "2026-01-08T02:30:00Z",
+        "generation": 6762.0,
+        "lead_time_hours": 63.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-08T04:30:00Z",
+        "generation": 6762.0,
+        "lead_time_hours": 61.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-08T07:30:00Z",
+        "generation": 7519.0,
+        "lead_time_hours": 58.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-08T09:30:00Z",
+        "generation": 7324.0,
+        "lead_time_hours": 56.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-08T11:30:00Z",
+        "generation": 7268.0,
+        "lead_time_hours": 54.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-08T15:30:00Z",
+        "generation": 6439.0,
+        "lead_time_hours": 50.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-08T18:30:00Z",
+        "generation": 6439.0,
+        "lead_time_hours": 47.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-08T22:30:00Z",
+        "generation": 6454.0,
+        "lead_time_hours": 43.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-09T02:30:00Z",
+        "generation": 6749.0,
+        "lead_time_hours": 39.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-09T04:30:00Z",
+        "generation": 6720.0,
+        "lead_time_hours": 37.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-09T07:30:00Z",
+        "generation": 6409.0,
+        "lead_time_hours": 34.5,
+        "is_selected": true,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-09T09:30:00Z",
+        "generation": 6409.0,
+        "lead_time_hours": 32.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-09T11:30:00Z",
+        "generation": 7416.0,
+        "lead_time_hours": 30.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-09T15:30:00Z",
+        "generation": 7005.0,
+        "lead_time_hours": 26.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-09T18:30:00Z",
+        "generation": 6895.0,
+        "lead_time_hours": 23.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-09T22:30:00Z",
+        "generation": 7243.0,
+        "lead_time_hours": 19.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-10T02:30:00Z",
+        "generation": 6962.0,
+        "lead_time_hours": 15.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-10T04:30:00Z",
+        "generation": 7091.0,
+        "lead_time_hours": 13.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-10T07:30:00Z",
+        "generation": 7541.0,
+        "lead_time_hours": 10.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-10T09:30:00Z",
+        "generation": 7886.0,
+        "lead_time_hours": 8.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-10T11:30:00Z",
+        "generation": 8689.0,
+        "lead_time_hours": 6.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-10T15:30:00Z",
+        "generation": 9393.0,
+        "lead_time_hours": 2.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-10T18:30:00Z",
+        "generation": 9552.0,
+        "lead_time_hours": -0.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-10T22:30:00Z",
+        "generation": 9552.0,
+        "lead_time_hours": -4.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      }
+    ]
+  },
+  "2026-01-15T12:00:00Z": {
+    "target_startTime": "2026-01-15T12:00:00Z",
+    "actual_generation": 9790.5,
+    "selected_forecast": 11049.0,
+    "cutoff_time": "2026-01-14T09:00:00Z",
+    "total_forecasts": 24,
+    "forecasts": [
+      {
+        "publishTime": "2026-01-13T02:30:00Z",
+        "generation": 11938.0,
+        "lead_time_hours": 57.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-13T04:30:00Z",
+        "generation": 11888.0,
+        "lead_time_hours": 55.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-13T07:30:00Z",
+        "generation": 11562.0,
+        "lead_time_hours": 52.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-13T09:30:00Z",
+        "generation": 11749.0,
+        "lead_time_hours": 50.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-13T11:30:00Z",
+        "generation": 11400.0,
+        "lead_time_hours": 48.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-13T15:30:00Z",
+        "generation": 11025.0,
+        "lead_time_hours": 44.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-13T18:30:00Z",
+        "generation": 11075.0,
+        "lead_time_hours": 41.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-13T22:30:00Z",
+        "generation": 11080.0,
+        "lead_time_hours": 37.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-14T02:30:00Z",
+        "generation": 11049.0,
+        "lead_time_hours": 33.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-14T04:30:00Z",
+        "generation": 11049.0,
+        "lead_time_hours": 31.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-14T07:30:00Z",
+        "generation": 11049.0,
+        "lead_time_hours": 28.5,
+        "is_selected": true,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-14T09:30:00Z",
+        "generation": 11178.0,
+        "lead_time_hours": 26.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-14T11:30:00Z",
+        "generation": 11351.0,
+        "lead_time_hours": 24.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-14T15:30:00Z",
+        "generation": 11854.0,
+        "lead_time_hours": 20.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-14T18:30:00Z",
+        "generation": 11859.0,
+        "lead_time_hours": 17.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-14T22:30:00Z",
+        "generation": 11155.0,
+        "lead_time_hours": 13.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-15T02:30:00Z",
+        "generation": 11148.0,
+        "lead_time_hours": 9.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-15T04:30:00Z",
+        "generation": 10693.0,
+        "lead_time_hours": 7.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-15T07:30:00Z",
+        "generation": 10405.0,
+        "lead_time_hours": 4.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-15T09:30:00Z",
+        "generation": 10503.0,
+        "lead_time_hours": 2.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-15T12:25:00Z",
+        "generation": 10229.0,
+        "lead_time_hours": -0.42,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-15T15:30:00Z",
+        "generation": 10229.0,
+        "lead_time_hours": -3.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-15T18:30:00Z",
+        "generation": 10229.0,
+        "lead_time_hours": -6.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-15T22:30:00Z",
+        "generation": 10229.0,
+        "lead_time_hours": -10.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      }
+    ]
+  },
+  "2026-01-20T12:00:00Z": {
+    "target_startTime": "2026-01-20T12:00:00Z",
+    "actual_generation": 15987.5,
+    "selected_forecast": 14802.0,
+    "cutoff_time": "2026-01-19T09:00:00Z",
+    "total_forecasts": 24,
+    "forecasts": [
+      {
+        "publishTime": "2026-01-18T02:30:00Z",
+        "generation": 8437.0,
+        "lead_time_hours": 57.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-18T04:30:00Z",
+        "generation": 7272.0,
+        "lead_time_hours": 55.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-18T07:30:00Z",
+        "generation": 10956.0,
+        "lead_time_hours": 52.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-18T09:30:00Z",
+        "generation": 12809.0,
+        "lead_time_hours": 50.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-18T11:30:00Z",
+        "generation": 13085.0,
+        "lead_time_hours": 48.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-18T15:30:00Z",
+        "generation": 12237.0,
+        "lead_time_hours": 44.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-18T18:30:00Z",
+        "generation": 13433.0,
+        "lead_time_hours": 41.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-18T22:30:00Z",
+        "generation": 14350.0,
+        "lead_time_hours": 37.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-19T02:30:00Z",
+        "generation": 14006.0,
+        "lead_time_hours": 33.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-19T04:30:00Z",
+        "generation": 13787.0,
+        "lead_time_hours": 31.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-19T07:30:00Z",
+        "generation": 14802.0,
+        "lead_time_hours": 28.5,
+        "is_selected": true,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-19T09:30:00Z",
+        "generation": 14607.0,
+        "lead_time_hours": 26.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-19T11:30:00Z",
+        "generation": 14798.0,
+        "lead_time_hours": 24.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-19T15:30:00Z",
+        "generation": 15457.0,
+        "lead_time_hours": 20.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-19T18:30:00Z",
+        "generation": 15402.0,
+        "lead_time_hours": 17.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-19T22:30:00Z",
+        "generation": 15125.0,
+        "lead_time_hours": 13.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-20T02:30:00Z",
+        "generation": 15869.0,
+        "lead_time_hours": 9.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-20T04:30:00Z",
+        "generation": 16113.0,
+        "lead_time_hours": 7.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-20T07:30:00Z",
+        "generation": 16273.0,
+        "lead_time_hours": 4.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-20T09:30:00Z",
+        "generation": 16782.0,
+        "lead_time_hours": 2.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-20T11:30:00Z",
+        "generation": 16842.0,
+        "lead_time_hours": 0.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-20T15:30:00Z",
+        "generation": 17081.0,
+        "lead_time_hours": -3.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-20T18:30:00Z",
+        "generation": 17081.0,
+        "lead_time_hours": -6.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-20T22:30:00Z",
+        "generation": 17081.0,
+        "lead_time_hours": -10.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      }
+    ]
+  },
+  "2026-01-22T08:00:00Z": {
+    "target_startTime": "2026-01-22T08:00:00Z",
+    "actual_generation": 15702.5,
+    "selected_forecast": 18478.0,
+    "cutoff_time": "2026-01-21T09:00:00Z",
+    "total_forecasts": 24,
+    "forecasts": [
+      {
+        "publishTime": "2026-01-20T02:30:00Z",
+        "generation": 19804.0,
+        "lead_time_hours": 53.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-20T04:30:00Z",
+        "generation": 19818.0,
+        "lead_time_hours": 51.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-20T07:30:00Z",
+        "generation": 19531.0,
+        "lead_time_hours": 48.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-20T09:30:00Z",
+        "generation": 19416.0,
+        "lead_time_hours": 46.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-20T11:30:00Z",
+        "generation": 19352.0,
+        "lead_time_hours": 44.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-20T15:30:00Z",
+        "generation": 19157.0,
+        "lead_time_hours": 40.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-20T18:30:00Z",
+        "generation": 18831.0,
+        "lead_time_hours": 37.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-20T22:30:00Z",
+        "generation": 18428.0,
+        "lead_time_hours": 33.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-21T02:30:00Z",
+        "generation": 18638.0,
+        "lead_time_hours": 29.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-21T04:30:00Z",
+        "generation": 18626.0,
+        "lead_time_hours": 27.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-21T07:30:00Z",
+        "generation": 18478.0,
+        "lead_time_hours": 24.5,
+        "is_selected": true,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-21T09:30:00Z",
+        "generation": 18413.0,
+        "lead_time_hours": 22.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-21T11:30:00Z",
+        "generation": 18405.0,
+        "lead_time_hours": 20.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-21T15:30:00Z",
+        "generation": 18310.0,
+        "lead_time_hours": 16.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-21T18:30:00Z",
+        "generation": 17888.0,
+        "lead_time_hours": 13.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-21T22:30:00Z",
+        "generation": 17715.0,
+        "lead_time_hours": 9.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-22T02:30:00Z",
+        "generation": 18060.0,
+        "lead_time_hours": 5.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-22T04:30:00Z",
+        "generation": 17765.0,
+        "lead_time_hours": 3.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-22T07:30:00Z",
+        "generation": 17393.0,
+        "lead_time_hours": 0.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-22T09:30:00Z",
+        "generation": 17424.0,
+        "lead_time_hours": -1.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-22T11:30:00Z",
+        "generation": 17424.0,
+        "lead_time_hours": -3.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-22T15:30:00Z",
+        "generation": 17424.0,
+        "lead_time_hours": -7.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-22T18:30:00Z",
+        "generation": 17424.0,
+        "lead_time_hours": -10.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-22T22:30:00Z",
+        "generation": 17424.0,
+        "lead_time_hours": -14.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      }
+    ]
+  },
+  "2026-01-31T15:00:00Z": {
+    "target_startTime": "2026-01-31T15:00:00Z",
+    "actual_generation": 8677.5,
+    "selected_forecast": 11088.0,
+    "cutoff_time": "2026-01-30T09:00:00Z",
+    "total_forecasts": 24,
+    "forecasts": [
+      {
+        "publishTime": "2026-01-29T02:30:00Z",
+        "generation": 12408.0,
+        "lead_time_hours": 60.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-29T04:30:00Z",
+        "generation": 11893.0,
+        "lead_time_hours": 58.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-29T07:30:00Z",
+        "generation": 11980.0,
+        "lead_time_hours": 55.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-29T09:30:00Z",
+        "generation": 12321.0,
+        "lead_time_hours": 53.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-29T11:30:00Z",
+        "generation": 11906.0,
+        "lead_time_hours": 51.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-29T15:30:00Z",
+        "generation": 11543.0,
+        "lead_time_hours": 47.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-29T18:30:00Z",
+        "generation": 11029.0,
+        "lead_time_hours": 44.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-29T22:30:00Z",
+        "generation": 11850.0,
+        "lead_time_hours": 40.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-30T02:30:00Z",
+        "generation": 12072.0,
+        "lead_time_hours": 36.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-30T04:30:00Z",
+        "generation": 11942.0,
+        "lead_time_hours": 34.5,
+        "is_selected": false,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-30T07:30:00Z",
+        "generation": 11088.0,
+        "lead_time_hours": 31.5,
+        "is_selected": true,
+        "is_before_cutoff": true
+      },
+      {
+        "publishTime": "2026-01-30T09:30:00Z",
+        "generation": 10352.0,
+        "lead_time_hours": 29.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-30T11:30:00Z",
+        "generation": 10721.0,
+        "lead_time_hours": 27.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-30T15:30:00Z",
+        "generation": 10677.0,
+        "lead_time_hours": 23.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-30T18:30:00Z",
+        "generation": 9939.0,
+        "lead_time_hours": 20.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-30T22:30:00Z",
+        "generation": 9673.0,
+        "lead_time_hours": 16.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-31T02:30:00Z",
+        "generation": 9920.0,
+        "lead_time_hours": 12.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-31T04:30:00Z",
+        "generation": 10042.0,
+        "lead_time_hours": 10.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-31T07:30:00Z",
+        "generation": 9553.0,
+        "lead_time_hours": 7.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-31T09:30:00Z",
+        "generation": 8817.0,
+        "lead_time_hours": 5.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-31T11:30:00Z",
+        "generation": 8751.0,
+        "lead_time_hours": 3.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-31T15:30:00Z",
+        "generation": 8698.0,
+        "lead_time_hours": -0.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-31T18:30:00Z",
+        "generation": 8698.0,
+        "lead_time_hours": -3.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      },
+      {
+        "publishTime": "2026-01-31T22:30:00Z",
+        "generation": 8698.0,
+        "lead_time_hours": -7.5,
+        "is_selected": false,
+        "is_before_cutoff": false
+      }
+    ]
+  }
+}

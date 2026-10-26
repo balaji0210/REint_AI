@@ -76,13 +76,27 @@ SAMPLE_FORECASTS = pd.DataFrame(
 )
 
 
+def test_root_endpoint():
+    """Verify GET / returns root service information and healthy status."""
+    response = client.get("/")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["message"] == "REint AI backend is running"
+    assert data["status"] == "healthy"
+    assert "/api/health" in data["endpoints"]
+
+
 def test_health_endpoint():
-    """Verify GET /api/health."""
+    """Verify GET /api/health and GET /health."""
     response = client.get("/api/health")
     assert response.status_code == 200
     data = response.json()
     assert data["status"] == "ok"
     assert "cache_dir" in data
+
+    shortcut = client.get("/health")
+    assert shortcut.status_code == 200
+    assert shortcut.json()["status"] == "ok"
 
 
 @patch("backend.main.get_cached_actuals", new_callable=AsyncMock)

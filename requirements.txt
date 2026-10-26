@@ -1,8 +1,0 @@
-fastapi
-uvicorn
-httpx
-pandas
-pytest
-python-dateutil
-pydantic
-numpy

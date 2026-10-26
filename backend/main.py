@@ -14,6 +14,8 @@ Provides REST endpoints for:
 from contextlib import asynccontextmanager
 from datetime import date, datetime, time, timedelta, timezone
 import os
+from pathlib import Path
+import sys
 from typing import List, Optional
 
 from fastapi import FastAPI, HTTPException, Query
@@ -21,32 +23,69 @@ from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
 import pandas as pd
 
-from backend.models import (
-    AccuracyResponse,
-    ActualRecord,
-    ActualsResponse,
-    ComparisonRecord,
-    ComparisonResponse,
-    DailyAccuracyRecord,
-    DailyAccuracyResponse,
-    ForecastExplorerItem,
-    ForecastExplorerResponse,
-    ForecastRecord,
-    ForecastsResponse,
-    HealthResponse,
-    MethodologyResponse,
-)
-from backend.services.cache import FileCache
-from backend.services.elexon import ElexonClient, ElexonError
-from backend.services.forecast import (
-    DEFAULT_CUTOFF_TIME,
-    DEFAULT_DAYS_BEFORE,
-    aggregate_actuals,
-    get_forecast_fetch_window,
-    match,
-    select_forecasts,
-)
-from backend.services.metrics import calculate_metrics, compute_interval_errors
+# Ensure current directory and parent directory are on sys.path
+# so imports work whether invoked from root (uvicorn backend.main:app)
+# or directly inside the backend directory (e.g. Vercel serverless deployment)
+CURRENT_DIR = Path(__file__).resolve().parent
+PARENT_DIR = CURRENT_DIR.parent
+for p in (str(CURRENT_DIR), str(PARENT_DIR)):
+    if p not in sys.path:
+        sys.path.insert(0, p)
+
+try:
+    from backend.models import (
+        AccuracyResponse,
+        ActualRecord,
+        ActualsResponse,
+        ComparisonRecord,
+        ComparisonResponse,
+        DailyAccuracyRecord,
+        DailyAccuracyResponse,
+        ForecastExplorerItem,
+        ForecastExplorerResponse,
+        ForecastRecord,
+        ForecastsResponse,
+        HealthResponse,
+        MethodologyResponse,
+    )
+    from backend.services.cache import FileCache
+    from backend.services.elexon import ElexonClient, ElexonError
+    from backend.services.forecast import (
+        DEFAULT_CUTOFF_TIME,
+        DEFAULT_DAYS_BEFORE,
+        aggregate_actuals,
+        get_forecast_fetch_window,
+        match,
+        select_forecasts,
+    )
+    from backend.services.metrics import calculate_metrics, compute_interval_errors
+except (ImportError, ModuleNotFoundError):
+    from models import (
+        AccuracyResponse,
+        ActualRecord,
+        ActualsResponse,
+        ComparisonRecord,
+        ComparisonResponse,
+        DailyAccuracyRecord,
+        DailyAccuracyResponse,
+        ForecastExplorerItem,
+        ForecastExplorerResponse,
+        ForecastRecord,
+        ForecastsResponse,
+        HealthResponse,
+        MethodologyResponse,
+    )
+    from services.cache import FileCache
+    from services.elexon import ElexonClient, ElexonError
+    from services.forecast import (
+        DEFAULT_CUTOFF_TIME,
+        DEFAULT_DAYS_BEFORE,
+        aggregate_actuals,
+        get_forecast_fetch_window,
+        match,
+        select_forecasts,
+    )
+    from services.metrics import calculate_metrics, compute_interval_errors
 
 # Initialize cache and Elexon client
 file_cache = FileCache()
@@ -60,18 +99,56 @@ app = FastAPI(
 
 # CORS configuration
 raw_cors = os.environ.get("CORS_ORIGINS", "*")
-if raw_cors == "*":
-    origins = ["*"]
+if raw_cors == "*" or not raw_cors:
+    origins = [
+        "https://r-eint-ai-m3z1.vercel.app",
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "http://127.0.0.1:5173",
+        "http://127.0.0.1:3000",
+    ]
+    # Allow any Vercel domain (previews, production) and local development ports
+    origin_regex = r"^https:\/\/.*\.vercel\.app$|^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$"
 else:
     origins = [orig.strip() for orig in raw_cors.split(",") if orig.strip()]
+    origin_regex = None
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
+    allow_origin_regex=origin_regex,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.get("/")
+def home():
+    """Root verification endpoint confirming backend status and route catalog."""
+    return {
+        "message": "REint AI backend is running",
+        "status": "healthy",
+        "service": "UK Wind Power Forecasting & Accuracy API",
+        "docs_url": "/docs",
+        "health_check": "/api/health",
+        "endpoints": [
+            "/api/health",
+            "/api/comparison",
+            "/api/accuracy",
+            "/api/daily-accuracy",
+            "/api/actuals",
+            "/api/forecasts",
+            "/api/forecast-explorer",
+            "/api/methodology",
+        ],
+    }
+
+
+@app.get("/health", response_model=HealthResponse)
+async def health_shortcut():
+    """Top-level health check shortcut."""
+    return await health_check()
 
 
 def parse_cutoff_time(cutoff_str: str) -> time:
@@ -134,12 +211,16 @@ async def get_cached_forecasts(publish_from: datetime, publish_to: datetime) -> 
 @app.get("/api/health", response_model=HealthResponse)
 async def health_check():
     """Health check endpoint with cache diagnostics."""
-    cached_files = list(file_cache.cache_dir.glob("*.json"))
+    cached_files = []
+    for d in file_cache.candidate_dirs:
+        if d.exists():
+            cached_files.extend(list(d.glob("*.json")))
+    unique_file_names = {f.name for f in cached_files}
     return HealthResponse(
         status="ok",
         timestamp=datetime.now(timezone.utc),
         cache_dir=str(file_cache.cache_dir),
-        cached_files_count=len(cached_files),
+        cached_files_count=len(unique_file_names),
     )
 
 

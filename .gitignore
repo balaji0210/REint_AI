@@ -48,6 +48,8 @@ data/cache/
 .cache/
 *.cache
 cache/
+!backend/data/cache/
+!backend/data/cache/*.json
 *.parquet
 *.csv.gz
 

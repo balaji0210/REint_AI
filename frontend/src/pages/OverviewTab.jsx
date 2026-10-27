@@ -169,7 +169,7 @@ export default function OverviewTab({ accuracy, comparison, loading, error, star
         <div className="chart-wrapper">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={chartData} margin={{ top: 10, right: 25, left: 10, bottom: 25 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(55, 65, 81, 0.4)" vertical={false} />
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--border-subtle)" vertical={false} />
               <XAxis
                 dataKey="time"
                 stroke="var(--text-dim)"
@@ -187,10 +187,10 @@ export default function OverviewTab({ accuracy, comparison, loading, error, star
               />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                  backgroundColor: 'var(--tooltip-bg)',
                   borderColor: 'var(--border-color)',
                   borderRadius: '8px',
-                  color: '#fff',
+                  color: 'var(--tooltip-text)',
                   fontSize: '0.8rem',
                 }}
                 formatter={(val, name) => [`${val.toLocaleString()} MW`, name]}

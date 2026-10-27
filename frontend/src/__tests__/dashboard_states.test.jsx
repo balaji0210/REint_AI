@@ -1,9 +1,10 @@
 import React from 'react';
-import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { describe, it, expect, vi } from 'vitest';
+import { render, screen, fireEvent } from '@testing-library/react';
 import OverviewTab from '../pages/OverviewTab';
 import AccuracyTab from '../pages/AccuracyTab';
 import MetricCard from '../components/MetricCard';
+import Header from '../components/Header';
 import { Activity } from 'lucide-react';
 
 describe('Frontend Dashboard State & Component Tests', () => {
@@ -118,6 +119,40 @@ describe('Frontend Dashboard State & Component Tests', () => {
       expect(screen.getByText('11,578')).toBeInTheDocument();
       expect(screen.getByText('MW')).toBeInTheDocument();
       expect(screen.getByText('Metered wind outturn (FUELHH)')).toBeInTheDocument();
+    });
+  });
+
+  describe('Header Theme Switcher', () => {
+    it('renders Dark Mode toggle button when light theme is active and triggers toggle callback', () => {
+      const toggleMock = vi.fn();
+      render(
+        <Header
+          activeTab="overview"
+          setActiveTab={() => {}}
+          theme="light"
+          onToggleTheme={toggleMock}
+        />
+      );
+
+      const toggleBtn = screen.getByRole('button', { name: /toggle color theme/i });
+      expect(toggleBtn).toBeInTheDocument();
+      expect(screen.getByText('Dark Mode')).toBeInTheDocument();
+
+      fireEvent.click(toggleBtn);
+      expect(toggleMock).toHaveBeenCalledTimes(1);
+    });
+
+    it('renders Light Mode toggle button when dark theme is active', () => {
+      render(
+        <Header
+          activeTab="overview"
+          setActiveTab={() => {}}
+          theme="dark"
+          onToggleTheme={() => {}}
+        />
+      );
+
+      expect(screen.getByText('Light Mode')).toBeInTheDocument();
     });
   });
 });

@@ -8,6 +8,22 @@ import MethodologyTab from './pages/MethodologyTab';
 import { api } from './services/api';
 
 export default function App() {
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('reint_theme') || 'light';
+    }
+    return 'light';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('reint_theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
+
   const [activeTab, setActiveTab] = useState('overview');
   const [startDate, setStartDate] = useState('2026-01-01');
   const [endDate, setEndDate] = useState('2026-01-31');
@@ -46,7 +62,12 @@ export default function App() {
 
   return (
     <div className="app-container">
-      <Header activeTab={activeTab} setActiveTab={setActiveTab} />
+      <Header
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        theme={theme}
+        onToggleTheme={toggleTheme}
+      />
 
       <main className="main-content">
         {/* Date and cutoff controls shown on Overview, Accuracy, and Methodology */}

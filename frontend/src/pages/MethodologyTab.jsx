@@ -45,7 +45,7 @@ export default function MethodologyTab({ comparison, accuracy }) {
             In Great Britain, the primary exchange day-ahead auction (EPEX SPOT GB Day-Ahead) operates with a gate closure of <strong>09:20 UK local time</strong> (09:00 internal decision freeze).
             For any delivery day D, the purchasing desk must lock physical wind generation forecasts at or before <strong>09:00 UTC on D-1</strong>.
           </p>
-          <div style={{ marginTop: '0.75rem', padding: '0.75rem', background: 'rgba(15, 23, 42, 0.7)', borderRadius: '6px', fontSize: '0.75rem' }} className="font-mono">
+          <div style={{ marginTop: '0.75rem' }} className="code-snippet font-mono">
             T_cutoff = (Delivery_Date - 1 day) @ 09:00 UTC<br />
             Selected = argmax(publishTime &lt;= T_cutoff)<br />
             Lead Time: 15.0h (delivery 00:00) to 38.0h (delivery 23:00)

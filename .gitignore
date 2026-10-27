@@ -45,11 +45,10 @@ dist-ssr/
 
 # Data cache & temporary files
 data/cache/
+backend/data/cache/
 .cache/
 *.cache
 cache/
-!backend/data/cache/
-!backend/data/cache/*.json
 *.parquet
 *.csv.gz
 

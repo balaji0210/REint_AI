@@ -12,13 +12,30 @@ import {
 import { Zap, Activity, AlertCircle, Clock, CheckCircle2, Info } from 'lucide-react';
 import MetricCard from '../components/MetricCard';
 
-export default function OverviewTab({ accuracy, comparison, loading, error }) {
+export default function OverviewTab({ accuracy, comparison, loading, error, startDate, endDate }) {
+  const formatLoadingPeriod = () => {
+    if (!startDate) return 'January 2026';
+    try {
+      const start = new Date(startDate + 'T00:00:00Z');
+      const end = endDate ? new Date(endDate + 'T00:00:00Z') : start;
+      const startMonth = start.toLocaleString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+      const endMonth = end.toLocaleString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+
+      if (startMonth === endMonth) {
+        return startMonth;
+      }
+      return `${startMonth} – ${endMonth}`;
+    } catch {
+      return 'January 2026';
+    }
+  };
+
   if (loading) {
     return (
       <div className="state-container" data-testid="loading-state">
         <div className="spinner"></div>
         <p style={{ color: 'var(--text-muted)', fontWeight: 500 }}>
-          Loading January 2026 wind outturn and day-ahead forecast data...
+          Loading {formatLoadingPeriod()} wind outturn and day-ahead forecast data...
         </p>
         <span style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginTop: 4 }}>
           (On initial cold start, the backend may take a few seconds to ingest and align upstream Elexon data)

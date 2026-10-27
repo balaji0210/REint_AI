@@ -25,8 +25,8 @@ export default function DateControls({
           <input
             type="date"
             className="control-input font-mono"
-            min="2026-01-01"
-            max="2026-01-31"
+            min="2024-01-01"
+            max="2026-12-31"
             value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
           />
@@ -40,8 +40,8 @@ export default function DateControls({
           <input
             type="date"
             className="control-input font-mono"
-            min="2026-01-01"
-            max="2026-01-31"
+            min="2024-01-01"
+            max="2026-12-31"
             value={endDate}
             onChange={(e) => setEndDate(e.target.value)}
           />

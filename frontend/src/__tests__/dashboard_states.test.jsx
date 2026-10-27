@@ -18,6 +18,23 @@ describe('Frontend Dashboard State & Component Tests', () => {
       ).toBeInTheDocument();
     });
 
+    it('renders dynamic month in loading state when a different month is selected', () => {
+      render(
+        <OverviewTab
+          loading={true}
+          comparison={null}
+          accuracy={null}
+          error={null}
+          startDate="2026-02-01"
+          endDate="2026-02-28"
+        />
+      );
+
+      expect(
+        screen.getByText(/Loading February 2026 wind outturn and day-ahead forecast data/i)
+      ).toBeInTheDocument();
+    });
+
     it('renders empty state when comparison data is empty', () => {
       render(<OverviewTab loading={false} comparison={[]} accuracy={null} error={null} />);
 

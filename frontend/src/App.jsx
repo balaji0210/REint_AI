@@ -72,6 +72,8 @@ export default function App() {
             comparison={comparison}
             loading={loading}
             error={error}
+            startDate={startDate}
+            endDate={endDate}
           />
         )}
 
